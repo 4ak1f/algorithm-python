@@ -1,14 +1,14 @@
-n=int(input("Enter integer "))
-count=0
-for i in range(2 , n//2):
-  if(n%i != 0):
-      continue
-      count+=1     
-  else:
-      
-      count+=1
-      break
-if(count>=0):
-    print(n , " is not prime ")
+num = int(input("Enter a number: "))
+if num < 2:
+    print(f"{num} is not a prime number.")
 else:
-   print(n , " is prime")
+    is_prime = True
+    for i in range(2, int(num/2) + 1):
+        if num % i == 0:
+            is_prime = False
+            break
+    
+    if is_prime:
+        print(f"{num} is a prime number.")
+    else:
+        print(f"{num} is not a prime number.")
