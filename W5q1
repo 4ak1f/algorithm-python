@@ -1,0 +1,73 @@
+import math
+def largest_of_three(a, b, c):
+return max(a, b, c)
+def volume_of_shape(shape, *dimensions):
+if shape == 'cylinder':
+radius, height = dimensions
+return math.pi * radius**2 * height
+elif shape == 'cube':
+side = dimensions[0]
+return side**3
+elif shape == 'box':
+length, width, height = dimensions
+return length * width * height
+else:
+return "Invalid shape"
+def area_of_rectangle(length, width):
+return length * width
+def circumference_of_circle(radius):
+return 2 * math.pi * radius
+def exchange_values(a, b):
+return b, a
+def distance_between_points(x1, y1, x2, y2):
+return math.sqrt((x2 - x1)**2 + (y2 - y1)**2)
+print("Select an option:")
+print("1. Find largest of 3 numbers")
+print("2. Find volume of cylinder, cube or rectangular box")
+print("3. Find area of rectangle")
+print("4. Find circumference of circle")
+print("5. Exchange values of two variables")
+print("6. Find distance between two points")
+choice = int(input("Enter your choice (1-6): "))
+if choice == 1:
+a = float(input("Enter first number: "))
+b = float(input("Enter second number: "))
+c = float(input("Enter third number: "))
+print("Largest number:", largest_of_three(a, b, c))
+elif choice == 2:
+shape = input("Enter shape (cylinder/cube/box): ").lower()
+if shape == 'cylinder':
+radius = float(input("Enter radius: "))
+height = float(input("Enter height: "))
+print("Volume of cylinder:", volume_of_shape(shape, radius, height))
+elif shape == 'cube':
+side = float(input("Enter side length: "))
+print("Volume of cube:", volume_of_shape(shape, side))
+elif shape == 'box':
+length = float(input("Enter length: "))
+width = float(input("Enter width: "))
+height = float(input("Enter height: "))
+print("Volume of rectangular box:", volume_of_shape(shape, length,
+width, height))
+else:
+print("Invalid shape")
+elif choice == 3:
+length = float(input("Enter length of rectangle: "))
+width = float(input("Enter width of rectangle: "))
+print("Area of rectangle:", area_of_rectangle(length, width))
+elif choice == 4:
+radius = float(input("Enter radius of circle: "))
+print("Circumference of circle:", circumference_of_circle(radius))
+elif choice == 5:
+a = float(input("Enter value of first variable: "))
+b = float(input("Enter value of second variable: "))
+a, b = exchange_values(a, b)
+print("After exchanging - First variable:", a, "Second variable:", b)
+elif choice == 6:
+x1, y1 = map(float, input("Enter coordinates of first point (x1 y1): ").split())
+x2, y2 = map(float, input("Enter coordinates of second point (x2 y2):
+").split())
+print("Distance between the points:", distance_between_points(x1, y1,
+x2, y2))
+else:
+print("Invalid choice")
