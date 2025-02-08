@@ -1,0 +1,4 @@
+def add_integers(*numbers):
+return sum(numbers)
+result = add_integers(1, 2, 3, 4, 5)
+print("Sum of integers:", result)
