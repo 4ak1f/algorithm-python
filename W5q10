@@ -1,0 +1,10 @@
+text = input("Enter a text: ")
+vowels = "aeiouAEIOU"
+vowel_count = 0
+vowel_list = []
+for char in text:
+if char in vowels:
+vowel_count += 1
+vowel_list.append(char)
+print("Vowels in the text:", vowel_list)
+print("Number of vowels:", vowel_count)
