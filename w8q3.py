@@ -1,0 +1,5 @@
+print("To find the intersection of two entered lists.")
+list1 = list(map(int, input("List 1:").split()))
+list2 = list(map(int, input("List 2:").split()))
+intersection = list(set(list1) & set(list2))
+print(intersection)

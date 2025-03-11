@@ -1,0 +1,5 @@
+print("To find the union of two entered lists.")
+list1 = list(map(int, input("Enter elements of list 1 separated by space: ").split()))
+list2 = list(map(int, input("Enter elements of list 2 separated by space: ").split()))
+union = list(set(list1) | set(list2))
+print(union)
